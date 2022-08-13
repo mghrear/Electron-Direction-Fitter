@@ -61,7 +61,7 @@ for file in files_e:
 	df = rp.read_root(file)
 
 	# Create dataframe for new data
-	df2 = pd.DataFrame(columns = ['x', 'y', 'z', 'dir'])
+	df2 = pd.DataFrame(columns = ['x', 'y', 'z', 'dir','offset'])
 
 	# Loop through the electron recoil simulations and process them
 	for index, row in df.iterrows():
@@ -107,7 +107,7 @@ for file in files_e:
 			z_final += [charge[2]]
 
 		# Store transformed positions and new dataframe
-		df2 = df2.append({'x' : x_final, 'y' : y_final, 'z' : z_final, 'dir' : [to_dir[0],to_dir[1],to_dir[2]] }, ignore_index = True)
+		df2 = df2.append({'x' : x_final, 'y' : y_final, 'z' : z_final, 'dir' : [to_dir[0],to_dir[1],to_dir[2]], 'offset' : [mean_dir[0],mean_dir[1],mean_dir[2]] }, ignore_index = True)
 
 	# Save file
 	df2.to_pickle('~/data/e_dir_fit/3D_processed_data/processed_recoils_'+str(ind)+'.pk')
