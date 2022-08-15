@@ -6,7 +6,7 @@ The 2D folder uses projected tracks and a 2DCNN implemented via keras
 
 
 ## 3D
-The 2D folder uses projected tracks and a 2DCNN implemented via keras
+The 3D folder uses on projected tracks and a 3D CNN implemented via keras
 
 explore_raw_data.ipynb:
 Exploratory jupyter notebook which demonstrates the following:
@@ -28,3 +28,6 @@ This script is used to read the processed simulation as pickle files and perform
 5. Demonstrate how simulations can be saved as sparse tensors which take up less space
 6. Demstrates how the spare tensors can be load
 7. Demonstrates how a data generator can be used to convert sparse tensors into dense tensors in a batch-by-batchn basis (so that they do not take up too much space)
+
+makes_sparse_tensors.py:
+Python implementation of 'explore_processed_data.ipynb' to convert all processed simulations into sparse tensors that can be stored efficiently and loaded into a NN as dense tensors in a batch-by-batch bases.
