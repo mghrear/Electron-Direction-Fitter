@@ -14,7 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 
 # The data is stored in 100 root files each containing 10k electron recoil simulations
-num_files = 2
+num_files = 100
 files_e = ['~/data/e_dir_fit/raw_data/he_co2_50keV_'+str(i)+'/he_co2_50keV_'+str(i)+'.root' for i in range(num_files) ]
 
 
