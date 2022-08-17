@@ -58,7 +58,7 @@ for file in files_e:
 		labels += [row['dir']]
 
 	# Save sparse tensors and labels
-	torch.save( sparse_tensors, data_loc+'/3D_sparse_tensors/sparse_recoils_'+str(ind)+'.txt')
+	torch.save( sparse_tensors, data_loc+'/3D_sparse_tensors/sparse_recoils_'+str(ind)+'.pt')
 	np.savetxt(data_loc+'/3D_sparse_tensors/labels_'+str(ind)+'.pt',labels)
 
 	print("Progress: ", ind, '/99')
