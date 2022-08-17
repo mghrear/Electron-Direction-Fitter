@@ -6,9 +6,11 @@ import pandas as pd
 import numpy as np
 import torch
 
+# Specify location of data file
+data_loc = '/Users/majdghrear/data/e_dir_fit'
 
 # The data is stored in 100 pickle files each containing 10k electron recoil simulations
-files_e = ['~/data/e_dir_fit/3D_processed_data/processed_recoils_'+str(i)+'.pk' for i in range(100) ]
+files_e = [data_loc+'/3D_processed_data/processed_recoils_'+str(i)+'.pk' for i in range(100) ]
 
 
 # Here a define the pixel grid parameters
@@ -56,8 +58,8 @@ for file in files_e:
 		labels += [row['dir']]
 
 	# Save sparse tensors and labels
-	torch.save( sparse_tensors, '~/data/e_dir_fit/3D_sparse_tensors/sparse_recoils_'+str(ind)+'.pt')
-	np.savetxt('~/data/e_dir_fit/3D_sparse_tensors/labels_'+str(ind)+'.pt',labels)
+	torch.save( sparse_tensors, data_loc+'/3D_sparse_tensors/sparse_recoils_'+str(ind)+'.pt')
+	np.savetxt(data_loc+'/3D_sparse_tensors/labels_'+str(ind)+'.pt',labels)
 
 	print("Progress: ", ind, '/99')
 

@@ -12,10 +12,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+# Specify location of data file
+data_loc = '/Users/majdghrear/data/e_dir_fit'
+
 
 # The data is stored in 100 root files each containing 10k electron recoil simulations
 num_files = 100
-files_e = ['~/data/e_dir_fit/raw_data/he_co2_50keV_'+str(i)+'/he_co2_50keV_'+str(i)+'.root' for i in range(num_files) ]
+files_e = [data_loc+'/raw_data/he_co2_50keV_'+str(i)+'/he_co2_50keV_'+str(i)+'.root' for i in range(num_files) ]
 
 
 # Define tools to rotate track randomly
