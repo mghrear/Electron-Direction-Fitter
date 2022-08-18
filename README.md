@@ -1,14 +1,7 @@
 # Electron-Direction-Fitter
-A convolutional neural network for determining the initial direction of a electron recoil
+A 3D convolutional neural network for determining the initial direction of a electron recoil.
 
-## 2D
-The 2D folder uses projected tracks and a 2DCNN implemented via keras
-
-
-## 3D
-The 3D folder uses on projected tracks and a 3D CNN implemented via keras
-
-explore_raw_data.ipynb:
+##explore_raw_data.ipynb:
 Exploratory jupyter notebook which demonstrates the following:
 1. Reading raw simulation finles
 2. Visualizing the raw simulation files 
@@ -16,7 +9,7 @@ Exploratory jupyter notebook which demonstrates the following:
 4. Rotating tracks to the random direction and applying diffusion
 5. Mean-centering the tracks 
 
-process_raw_data.py:
+##process_raw_data.py:
 Python implementation of 'explore_raw_data.ipynb' to process all raw degrad simulations.
 
 explore_processed_data.ipynb:
@@ -29,5 +22,5 @@ This script is used to read the processed simulation as pickle files and perform
 6. Demstrates how the spare tensors can be load
 7. Demonstrates how a data generator can be used to convert sparse tensors into dense tensors in a batch-by-batchn basis (so that they do not take up too much space)
 
-makes_sparse_tensors.py:
+##makes_sparse_tensors.py:
 Python implementation of 'explore_processed_data.ipynb' to convert all processed simulations into sparse tensors that can be stored efficiently and loaded into a NN as dense tensors in a batch-by-batch bases.
