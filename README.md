@@ -1,7 +1,7 @@
 # Electron-Direction-Fitter
 A 3D convolutional neural network for determining the initial direction of a electron recoil.
 
-##explore_raw_data.ipynb:
+explore_raw_data.ipynb:
 Exploratory jupyter notebook which demonstrates the following:
 1. Reading raw simulation finles
 2. Visualizing the raw simulation files 
