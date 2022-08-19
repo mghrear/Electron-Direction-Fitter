@@ -24,3 +24,6 @@ This script is used to read the processed simulation as pickle files and perform
 
 ## makes_sparse_tensors.py:
 Python implementation of 'explore_processed_data.ipynb' to convert all processed simulations into sparse tensors that can be stored efficiently and loaded into a NN as dense tensors in a batch-by-batch bases.
+
+## best_ang_res.py:
+Uses the starting point and optimal fit length to determine the best achievable angular resolution
